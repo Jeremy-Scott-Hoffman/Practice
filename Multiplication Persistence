@@ -1,0 +1,11 @@
+def persistence(n): #find how many steps a number lasts
+    print ("Num: ",n)
+    if len(str(n))==1:
+        return 1
+    else:
+        product = 1
+        for i in str(n):
+            product = product * int(i)
+        return persistence(product) + 1
+
+print ("Persistence = ",persistence(577))
